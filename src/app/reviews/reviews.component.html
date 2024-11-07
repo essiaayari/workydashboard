@@ -1,0 +1,70 @@
+<section id="content">
+    <main>
+        <div class="head-title">
+            <div class="left">
+                <h1>Reviews</h1>
+                <ul class="breadcrumb">
+                  <li>
+                      <a>Reviews</a>
+                  </li>
+                  <li><i class='bx bx-chevron-right' ></i></li>
+                  <li>
+                      <a class="active" routerLink="/home">Home</a>
+                  </li>
+              </ul>
+            </div>
+            
+        </div>
+        <div class="table-data">
+            <div class="order">
+                <div class="head">
+                    <h3>Review Details</h3>
+                    <i class='bx bx-plus' >   </i>
+                    <div class="container">
+                      <input type="text" name="text" class="input" required="" placeholder="Type to search...">
+                      <div class="icon" >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                          <title>Search</title>
+                          <path d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"></path>
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
+                        </svg>
+                      </div>
+                    </div>                  <i class='bx bx-filter' ></i>
+                  
+                    </div>
+  
+          <!-- all the data  display -->
+          <table>
+            <thead>
+              <tr>
+                <th>Job Title</th>
+                <th>Author</th>
+                <th>Comment</th>
+                <th>Date</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let r of reviewList">
+                <td>{{ r.jobTitle }}</td>            
+                <td>{{ r.author }}</td>     
+                    
+                <td>{{ r.comment}}</td>
+                <td> {{r.time}} </td>
+                <td>
+                    <button class="btn" (click)="deleteReview(r)"> 
+                      <i class="fa fa-trash" aria-hidden="true" style="color: red;"></i>
+                    </button>
+                  </td>
+                  
+              </tr>
+            </tbody>
+          </table>
+          
+            </div>
+            </div>
+           
+        <router-outlet></router-outlet>
+  
+    </main>
+  </section>

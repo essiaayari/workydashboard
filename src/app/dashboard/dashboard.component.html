@@ -1,0 +1,51 @@
+<body>
+    <section id="content">
+      
+        <main>
+            
+            <div class="head-title">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <ul class="breadcrumb">
+                        <li>
+                            <a >Dashboard</a>
+                        </li>
+                        <li><i class='bx bx-chevron-right' ></i></li>
+                        <li>
+                            <a class="active" routerLink="/home">Home</a>
+                        </li>
+                    </ul>
+                </div>
+              
+            </div>
+            <ul class="box-info">
+                <li class="job-count">
+                    <i class="fa-regular fa-calendar" style="font-size: 30px;"></i>
+                    <span class="text">
+                        <h3>{{ jobscount$ | async }}</h3>
+                        <div>Jobs</div>
+                    </span>
+                </li>
+                
+                <li >
+                    <i class="fa-regular fa-comment" style="font-size: 30px;"></i>
+                    <span class="text">
+                        <div>
+                            Comments
+                        </div>
+                    </span>
+                </li>
+            </ul>
+            
+           <br><br><br>
+           <div class="chart">
+            <div class="pie" [chart]="pchart"></div>
+          </div>
+          
+    
+           
+               
+
+        </main>
+    </section>
+</body>
